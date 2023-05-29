@@ -1,3 +1,5 @@
+pyinstaller 000000_gpnf_integrador.py --onefile --name="GPNF Integrador"
+
 pyinstaller 000001_relatorio_mega_fiscal.py --onefile --name="Relatório Mega - Fiscal"
 
 pyinstaller 000002_relatorio_mega_financeiro.py --onefile --name="Relatório Mega - Financeiro"

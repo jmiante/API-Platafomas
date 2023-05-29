@@ -15,9 +15,10 @@ with sqlite3.connect('_Resumo.sqlite') as conn:
 
 insert = False
 data = [
+    ['2022-07-03', '000.000', 'Integrador GPNF', 'pyinstaller 000000_gpnf_integrador.py --onefile --name="GPNF Integrador"'],
     ['2023-05-13', '000.001', 'Relatório Mega - Fiscal', 'pyinstaller 000001_relatorio_mega_fiscal.py --onefile --name="Relatório Mega - Fiscal"'],
     ['2023-05-15', '000.002', 'Relatório Mega - Financeiro', 'pyinstaller 000002_relatorio_mega_financeiro.py --onefile --name="Relatório Mega - Financeiro"'],
-    ['2023-05-29', '000.003', 'Relatório GPNF - Engenharia', 'pyinstaller 000003_relatorio_gpnf_engenharia.py --onefile --name="Relatório GPNF - Engenharia"']
+    ['2023-05-29', '000.003', 'Relatório GPNF - Engenharia', 'pyinstaller 000003_relatorio_gpnf_engenharia.py --onefile --name="Relatório GPNF - Engenharia"'],
 ]
 if insert:
     with sqlite3.connect('_Resumo.sqlite') as conn:
@@ -30,7 +31,7 @@ if insert:
 
 with sqlite3.connect('_Resumo.sqlite') as conn:
     cursor = conn.cursor()
-    sql = f"SELECT * FROM resumo"
+    sql = f"SELECT * FROM resumo ORDER BY api"
     cursor.execute(sql)
     fetch = cursor.fetchall()
     conn.commit()
