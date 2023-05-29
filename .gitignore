@@ -1,0 +1,9 @@
+# Configurações Python
+.venv/
+__pycache__
+*.pyc
+build/
+dist/
+
+# Configurações Pessoais
+local_settings.py
